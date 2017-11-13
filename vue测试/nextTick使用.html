@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <div>
+        <example></example>
+    </div>
+</div>
+
+<script>
+    Vue.component('example', {
+        template: '<span>{{ message }}</span>',
+        data: function () {
+            return {
+                message: '没有更新'
+            }
+        },
+        created () {
+//            this.updateMessage();
+        },
+        mounted () {
+            this.updateMessage();
+        },
+        methods: {
+            updateMessage: function () {
+                this.message = '更新完成'
+                console.log(this.$el.textContent) // => '没有更新'
+                this.$nextTick(function () {
+                    console.log(this.$el.textContent) // => '更新完成'
+                })
+            }
+        }
+    })
+    new Vue({
+        el:'#app'
+    })
+
+    //    vm.message = 'new message'
+//    console.log(vm.$el.textContent)
+//    Vue.nextTick(function () {
+//        console.log(vm.$el.textContent)
+//    })
+</script>
+</body>
+
+</html>

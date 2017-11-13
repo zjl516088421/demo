@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="(item, index) in list">
+                {{index}} {{item}}
+            </li>
+            <li v-for="(item, index) in arr">
+                {{index}} {{item}}
+            </li>
+        </ul>
+        <button @click="change1">click1</button>
+        <button @click="change2">click2</button>
+    </div>
+    <script src="vue.min.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                list: [
+                    {name:'zhangsan',age:10},
+                    {name:'lisi',age:21},
+                    {name:'wangwu',age:22},
+                    {name:'wangwu',age:22}
+                ],
+                arr: [11, 22, 33]
+            },
+            methods: {
+                /* 视图会改变 */
+//                change () {
+//                    this.list[0].name = 'hello'
+//                }
+                /* 视图不会改变 */
+//                change () {
+//                    this.list[0] = {name:'hello',age:10}
+//                }
+                /* 视图会改变  Vue.set就是this.$set的别名，这两个本质上是等价的。 */
+                change1 () {
+                    this.$set(this.list,0,{name:'hello',age:22}) //这样就能被vue监控到，更新视图
+                },
+                change2 () {
+                    this.arr[1] = 55
+                    this.$set(this.arr,0,888)
+                }
+            }
+        });
+//        vm.arr[1] = 55;
+//        vm.$set(vm.arr,2,888);
+    </script>
+</body>
+
+</html>
