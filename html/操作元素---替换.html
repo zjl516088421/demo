@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="box">
+        <h2>替换段落</h2>
+        <p>凑数的</p>
+    </div>
+    <button>替换</button>
+    <script>
+        var h2=document.getElementsByTagName("h2")[0];
+        var btn=document.getElementsByTagName("button")[0];
+        var h1=document.createElement("h1");
+//        var box=document.getElementsByTagName("div")[0];
+        h1.innerHTML="新标题";
+        btn.onclick=function(){
+
+            h2.parentNode.replaceChild(h1,h2);
+//            box.replaceChild(h1,h2);
+
+        }
+    </script>
+
+</body>
+</html>

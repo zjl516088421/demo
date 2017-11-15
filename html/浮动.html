@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .a{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            border:1px solid black;
+            float: left;
+        }
+        .box{
+            border: 1px solid red;
+
+            /*display: table;*/
+            /*display: table-cell;*/
+            /*display: table-caption;会让横着的元素变为竖直。*/
+            /*overflow: auto;*/
+            /*overflow: scroll;*/
+            /*overflow: hidden;*/
+        }
+        /*.b{*/
+            /*clear: both;*/
+        /*}*/
+        .box::after{
+            content: "";
+            display: table;/*必须用table,其他的都不行*/
+            clear: both;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="a"><img src="img/1.png" alt=""></div>
+        <div class="a"></div>
+        <div class="a"></div>
+        <div class="a"></div>
+        <!--<div class="b"></div>-->
+    </div>
+</body>
+</html>

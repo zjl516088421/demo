@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background-color: #333;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: orangered;
+            animation: move 4s ease 0s infinite;
+        }
+        @keyframes move {
+            0%{
+                transform: translateX(100px);
+            }
+            30%{
+                transform: translateX(400px);
+            }
+            60%
+            {
+                transform: translateX(200px);
+            }
+            100%{
+                transform: translateX(500px);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+</body>
+</html>

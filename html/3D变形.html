@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            height: 100%;
+            width: 100%;
+            background-color: red;
+            perspective-origin:center;
+
+            transition: transform 1s;
+
+        }
+        .box:hover{
+            transform: scaleZ(5) rotateX(45deg);
+
+        }
+        .a{
+            margin: 50px auto 0px;
+            width: 200px;
+            height: 200px;
+            border:1px dashed black;
+            /*3d效果需要以下两个属性*/
+            perspective: 100px;
+            transform-style: preserve-3d ;
+        }
+
+    </style>
+</head>
+<body>
+<div class="a">
+    <div class="box">
+
+    </div>
+</div>
+
+</body>
+</html>

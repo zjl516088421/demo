@@ -1,0 +1,83 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button id="btn">创建并插入</button>
+    <script>
+        var btn=document.getElementById("btn");
+        btn.onclick=function () {
+            var h1=document.createElement("h1");
+            h1.innerHTML="对不对";
+//            document.body.appendChild(h1);
+            document.body.insertBefore(h1,btn);
+            console.log(h1);
+        }
+    </script>
+
+</body>
+</html>-->
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <button>创建并插入</button>
+    <script>
+        var btn=document.getElementsByTagName("button")[0];
+        btn.onclick=function(){
+            var h2=document.createElement("h2");
+            h2.innerHTML="这是一个创建插入";
+            document.body.appendChild(h2);
+            console.log(h2)
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

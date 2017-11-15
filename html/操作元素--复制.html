@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="box">
+        <h1>复制这个</h1>
+        <p>凑热闹</p>
+    </div>
+<button>浅复制,只复制标签</button>
+<button>深复制,复制标签以及标签里面的所有东西</button>
+    <script>
+        var btn=document.getElementsByTagName("button");
+        var h1=document.getElementsByTagName("h1")[0];
+        btn[0].onclick=function(){
+            var a=h1.cloneNode(false);
+            document.body.appendChild(a);
+        }
+        btn[1].onclick=function(){
+            var b=h1.cloneNode(true);
+            document.body.appendChild(b);
+        }
+    </script>
+
+
+
+
+
+
+</body>
+</html>

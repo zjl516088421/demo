@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function(){
+
+            var imgs = document.getElementsByTagName('img');
+            for(var i=0,len = imgs.length; i<len; i++){
+                imgs[i]['index']=i;
+                imgs[i].onmouseover=function () {
+                    for (var j=0;j<=this['index'];j++){
+                        var str=imgs[j].src;
+                        var str=str.replace('rank_3','rank_1');
+                        var str=str.replace('rank_4','rank_2');
+                        imgs[j].src=str;
+                    }
+                    for (var k=this['index']+1;k<len;k++){
+                        var str=imgs[k].src;
+                        var str=str.replace('rank_1','rank_3');
+                        var str=str.replace('rank_2','rank_4');
+                        imgs[k].src=str;
+
+                    }
+                }
+            }
+
+
+
+
+
+
+
+        }
+    </script>
+</head>
+<body>
+    <p>用户评分:9  评分人数 10</p>
+    <p>
+        <img src="images/rank_1.gif" alt=""><img src="images/rank_2.gif" alt="">
+        <img src="images/rank_1.gif" alt=""><img src="images/rank_2.gif" alt="">
+        <img src="images/rank_1.gif" alt=""><img src="images/rank_2.gif" alt="">
+        <img src="images/rank_1.gif" alt=""><img src="images/rank_2.gif" alt="">
+        <img src="images/rank_1.gif" alt=""><img src="images/rank_2.gif" alt="">
+
+        <img src="images/rank_3.gif" alt=""><img src="images/rank_4.gif" alt="">
+        <img src="images/rank_3.gif" alt=""><img src="images/rank_4.gif" alt="">
+        <img src="images/rank_3.gif" alt=""><img src="images/rank_4.gif" alt="">
+        <img src="images/rank_3.gif" alt=""><img src="images/rank_4.gif" alt="">
+        <img src="images/rank_3.gif" alt=""><img src="images/rank_4.gif" alt="">
+
+    </p>
+
+</body>
+</html>

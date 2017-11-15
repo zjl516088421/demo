@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            border: 2px solid red;
+            top: 50px;
+            left: 50px;
+            position: absolute;
+
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    这是一个div
+</div>
+<script>
+    var div=document.getElementsByTagName("div")[0];
+    console.log(div.offsetLeft);
+    console.log(div.offsetTop);
+</script>
+</body>
+</html>

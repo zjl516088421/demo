@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload=function(){
+//            var a=document.getElementById("baz");
+//            var c=document.getElementById("foo");
+//            var b=c.getElementsByTagName("div");
+
+          alert(document.getElementsByName("baz").length);
+            alert(document.getElementsByName("foo").length);
+            alert(document.getElementsByName("bar").length);
+//            console.log(a.nodeType);
+//            console.log(b.nodeType);
+//            console.log(document.getElementById("foo").nodeType);
+
+
+
+
+
+        }
+    </script>
+</head>
+<body>
+    <div id="foo">
+        <a href="" name="bar"></a>
+        <a href="" name="bar"></a>
+        <div name="baz"></div>
+        <div name="baz"></div>
+        <div name="baz"></div>
+        <a href="" name="baz"></a>
+
+
+    </div>
+
+
+</body>
+</html>

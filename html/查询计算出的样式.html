@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            border:2px solid red;
+            background: #cccccc;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <h2>获取计算后的样式</h2>
+    </div>
+    <script>
+        var div=document.getElementsByTagName("div")[0];
+//        console.log(window.getComputedStyle(div));标准浏览器采用
+//        console.log(window.getComputedStyle(div)['border']);IE浏览器采用
+        var t;
+        t=getComputedStyle(div)||currentTarget(div);
+        console.log(t);
+        //用能力检测得到兼容
+    </script>
+
+</body>
+</html>

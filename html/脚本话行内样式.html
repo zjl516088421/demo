@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+    <script>
+
+        window.onload=function(){
+
+            var div=document.getElementsByTagName("div")[0];
+            var btn=document.getElementsByTagName("button");
+            btn[0].onclick=function () {
+                div.style.display="block";
+
+            }
+            btn[1].onclick=function () {
+                div.style.display="none";
+            }
+            console.log(div.style.fontSize);
+            //使用style读取style声明的样式,只能读取写在行内的style样式。
+
+
+
+
+        }
+    </script>
+</head>
+<body>
+    <div style="font-size: 16px"></div>
+    <button>显现</button>
+    <button>隐藏</button>
+</body>
+</html>

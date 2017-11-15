@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button id="btn">创建元素</button>
+    <script>
+        var btn=document.getElementById("btn");
+        btn.onclick=function () {
+            var h1=document.createElement("h1");
+//            h1.innerHTML="这是新增H1标签";
+            console.log(h1);
+
+            document.body.insertBefore(h1,btn);
+            document.body.appendChild(h1);
+        }
+
+    </script>
+
+</body>
+</html>

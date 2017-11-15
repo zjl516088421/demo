@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background-color: #eee;
+            font-size: 14px;
+            line-height: 22px;
+        }
+        .box{
+            width: 600px;
+            margin: 50px auto 0;
+            border: 10px solid #cccccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span id="content">
+            打了快圣诞节来看来得及拉克丝到家了卡时间段里看见了的卢卡斯的加拉圣诞节来看经典款拉伸的拉开时间段
+            打了快圣诞节来看来得及拉克丝到家了卡时间段里看见了的卢卡斯的加拉圣诞节来看经典款拉伸的拉开时间段
+            打了快圣诞节来看来得及拉克丝到家了卡时间段里看见了的卢卡斯的加拉圣诞节来看经典款拉伸的拉开时间段
+            打了快圣诞节来看来得及拉克丝到家了卡时间段里看见了的卢卡斯的加拉圣诞节来看经典款拉伸的拉开时间段
+            打了快圣诞节来看来得及拉克丝到家了卡时间段里看见了的卢卡斯的加拉圣诞节来看经典款拉伸的拉开时间段
+            打了快圣诞节来看来得及拉克丝到家了卡时间段里看见了的卢卡斯的加拉圣诞节来看经典款拉伸的拉开时间段
+            打了快圣诞节来看来得及拉克丝到家了卡时间段里看见了的卢卡斯的加拉圣诞节来看经典款拉伸的拉开时间段
+            打了快圣诞节来看来得及拉克丝到家了卡时间段里看见了的卢卡斯的加拉圣诞节来看经典款拉伸的拉开时间段
+            打了快圣诞节来看来得及拉克丝到家了卡时间段里看见了的卢卡斯的加拉圣诞节来看经典款拉伸的拉开时间段
+        </span>
+        <a href="" id="btn">
+            >>>>>>>>收缩
+        </a>
+
+    </div>
+    <script>
+        var btn=document.getElementById("btn");
+        var content=document.getElementById("content");
+        var str = content.innerHTML;
+        var onOff=true;
+        btn.onclick=function(){
+            if(onOff){
+                content.innerHTML=str.substr(0,20)+".......";
+                btn.innerHTML=">>>>>>展开";
+            }
+            else{
+                content.innerHTML=str;
+                btn.innerHTML="<<<<<<收缩";
+            }
+            onOff=!onOff;
+            return false;
+        }
+
+
+    </script>
+
+</body>
+</html>

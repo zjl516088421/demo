@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 500px;
+            margin: 50px auto;
+        }
+        #cvs{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <canvas id="cvs" width="500" height="300">
+
+        </canvas>
+    </div>
+    <script>
+        var cvs = document.getElementById('cvs');
+        var ctx = cvs.getContext('2d');
+        ctx.fillStyle = '#dddddd';
+//        ctx.fillRect(10,10,130,130);
+////        ctx.clearRect(20,20,40,40);
+//        ctx.moveTo(50,50);
+//        ctx.lineTo(120,120);
+//        ctx.beginPath();
+//        ctx.arc(55,55,50,0,1.5*Math.PI);
+//        ctx.stroke();
+
+//        ctx.beginPath();
+//        ctx.moveTo(20,20);           // 创建开始点
+//        ctx.lineTo(100,20);          // 创建水平线
+//        ctx.arcTo(150,20,150,70,50); // 创建弧
+//        ctx.lineTo(150,120);         // 创建垂直线
+//        ctx.stroke();                // 进行绘制
+        ctx.fillStyle="yellow";
+        ctx.fillRect(0,0,100,100)
+
+        ctx.transform(1,2,1,1,5,5);
+        ctx.fillStyle="red";
+        ctx.fillRect(0,0,100,100);
+
+
+    </script>
+</body>
+</html>

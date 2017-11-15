@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .cube{
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            font-size: 60px;
+            position: relative;
+            transform-style: preserve-3d;
+            color:#fff;
+            margin:auto;
+            transition:all 3s;
+        }
+        .cube:hover{
+            transform:rotate3d(1,1,1,360deg);
+        }
+        .cube>div{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
+        .front{
+            transform: translateZ(100px);
+            background-color: red;
+        }
+        /*先位移在旋转*/
+        .behind{
+            transform: translateZ(-100px) rotateX(180deg);
+            background-color: blue;
+        }
+        .left{
+            transform: translateX(-100px) rotateY(-90deg);
+            background-color: purple;
+        }
+        .right{
+            transform: translateX(100px) rotateY(90deg);
+            background-color: pink;
+        }
+        .bottom{
+            transform: translateY(100px) rotateX(-90deg);
+            background-color: green;
+        }
+        .top{
+            transform: translateY(-100px) rotateX(90deg);
+            background-color: black;
+        }
+
+    </style>
+</head>
+<body>
+<div class="cube">
+    <div class="left">left</div>
+    <div class="right">right</div>
+    <div class="top">top</div>
+    <div class="bottom">bottom</div>
+    <div class="front">front</div>
+    <div class="behind">behind</div>
+</div>
+
+</body>
+</html>

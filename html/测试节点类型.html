@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload=function(){
+//            var p=document.getElementById("box2");
+//            var p2=p.getElementsByTagName("p");
+//            console.log(p2);
+
+
+var p=document.getElementById("box2").getElementsByTagName("p");
+            console.log(p);
+
+            var p=document.getElementById("box2").getElementsByTagName("p")[2];
+            console.log(p);
+
+
+        }
+    </script>
+</head>
+<body>
+<!--    <h1 id="t1">使用标准的方法来获取元素</h1>
+    <ul>
+        <li id="li1">使用getelementbyid</li>
+        <li>使用getelementbytagname</li>
+    </ul>
+    <script>
+        var t1=document.getElementById("t1");
+        console.log(t1);
+        console.log(t1.nodeType);
+        var t11=t1.firstChild;
+        console.log(t11);
+        console.log(t11.nodeType);
+        var t2=document.getElementsByTagName("h1")[0];
+        console.log(t2);
+        console.log(t2.nodeType);
+        var li1=document.getElementById("li1");
+        console.log(li1);
+        console.log(li1.nodeType);
+        var li2=document.getElementsByTagName("li")[1];
+        console.log(li2);
+        console.log(li2.nodeType);
+
+    </script>-->
+
+    <div id="box1">
+        <p>box1-1</p>
+        <p>box1-2</p>
+        <p>box1-3</p>
+    </div>
+    <div id="box2">
+        <p>box2-1</p>
+        <p>box2-2</p>
+        <p>box2-3</p>
+    </div>
+
+
+
+</body>
+</html>

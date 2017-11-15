@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            border: 2px solid red;
+            padding: 10px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    这是一个div
+</div>
+<script>
+    var div=document.getElementsByTagName("div")[0];
+    console.log(div.offsetWidth);
+    console.log(div.offsetHeight);
+    //元素的尺寸
+    /*console.log(document.body.scrollTop);//谷歌采用
+    console.log(document.documentElement.scrollTop);//火狐采用*/
+    var t;
+    t=document.body.scrollTop||document.documentElement.scrollTop;
+    console.log(t);
+    //兼容写法
+</script>
+
+</body>
+</html>
