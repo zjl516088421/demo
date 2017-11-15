@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+
+        window.onload = function () {
+            var str = document.getElementsByTagName('span')[0];
+
+            str.onclick = function () {
+                console.log("click");
+            }
+
+            str.onmouseover = function () {
+                console.log("mouseover");
+            }
+
+            str.onmouseout = function () {
+                console.log("onmouseout");
+            }
+            str.onmousedown = function () {
+                console.log("onmousedown");
+            }
+            str.onmousemove = function () {
+                console.log("onmousemove");
+            }
+            str.onmouseup = function () {
+                console.log("onmouseup");
+            }
+
+        }
+
+
+    </script>
+
+    <style>
+        span{
+
+            display: block;
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            background-color: red;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <button>onclick</button>
+    <span>哈哈</span>
+
+
+
+
+
+
+</body>
+</html>

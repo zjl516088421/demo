@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文创资讯</title>
+    <link rel="stylesheet" href="css/IndexStyle.css">
+
+    <script>
+        window.onload = function () {
+
+            var lis = document.getElementById('options').getElementsByTagName('li');
+            var uls = document.getElementById('contens').getElementsByTagName('ul');
+            var len = lis.length;
+            for(var i = 0; i <len; i++)
+            {
+                lis[i]['index'] = i;
+                lis[i].onmouseover = function () {
+                    for(var j = 0;j < len; j++)
+                    {
+                        lis[j].className = 'hot-information-other';
+                    }
+                    this.className = 'hot-information-current';
+
+                    for(var k = 0; k < len; k++)
+                    {
+                        uls[k].style.display = 'none';
+                    }
+                    uls[this.index].style.display = 'block';
+                }
+            }
+
+
+            var big = document.getElementById('big-pic');
+            var navs = document.getElementById('nav').getElementsByTagName('li');
+
+            var t1 = null;
+            var init = 0;
+
+            function start() {
+                t1 = setInterval(function () {
+                    init++;
+                    init %=3;
+                    big.style.left = init*-420+'px';
+
+                    for(var x = 0; x < 3;x++)
+                    {
+                        navs[x].className = '';
+                    }
+                    navs[init].className = 'on';
+                },2000);
+
+            }
+
+            start();
+            // 绑定两个事件 mouseover事件
+            big.onmouseover = function () {
+                clearInterval(t1);
+            }
+            // 绑定mouseout事件
+            big.onmouseout = function () {
+                start();
+            }
+
+            // 对数字导航的进行绑定
+            for(var j=0, len = navs.length; j<len; j++){
+                navs[j].idx = j;  // 这一步是必须要做
+                // 循环绑定事件
+                navs[j].onmouseover = function () {
+                    clearInterval(t1);
+                    // 大图切换
+                    init = this.idx;
+                    big.style.left = init*-430 + 'px';
+
+                    // 导航切换
+                    for(var i=0; i<3; i++){
+                        navs[i].className = "";
+                    }
+                    navs[init].className = "on";
+                }
+            }
+
+
+
+
+        }
+
+    </script>
+
+
+</head>
+
+
+
+<body>
+
+    <!--头部列表导航开始-->
+    <div class="site-header-upper">
+        <div class="site-header-content">
+            <ul class="site-header-content-left">
+                <li><a href="">Language/简 <span class="triangle"></span></a></li>
+                <li><a class="site-header-content-left-border" href="">首页</a></li>
+                <li><a class="site-header-content-left-border" href="">需求大厅</a></li>
+                <li><a class="site-header-content-left-border" href="">创意空间</a></li>
+                <li><a class="site-header-content-left-border" href="">渲染工厂</a></li>
+                <li><a class="site-header-content-left-border" href="">创意商城</a></li>
+                <li><a href="">文创资讯</a></li>
+            </ul>
+            <ul class="site-header-content-right">
+                <li><a href="">亲,请登录</a></li>
+                <li><a href="">免费注册</a></li>
+                <li><a href="">软件中心</a></li>
+                <li><a href="">帮助中心</a></li>
+                <li><a href="">联系我们</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--头部列表导航结束-->
+    
+    <!--头部搜索开始-->
+    <div class="site-header-search">
+        <div class="header-search-img">
+            <img src="img/header-img.jpg" alt="">
+        </div>
+        <div class="header-search-content">
+            <div class="search-content-logo">
+                <img src="img/header-logo.jpg" alt="">
+
+            </div>
+            <div class="search-content-form">
+                <div class="content-form-item">
+                    <ul>
+                        <li><a href="">暑假档</a></li>
+                        <li><a href="">小黄人</a></li>
+                        <li><a href="">泰剧</a></li>
+                        <li><a href="">奥斯卡评委</a></li>
+                        <li><a href="">王者荣耀</a></li>
+                    </ul>
+                </div>
+                <div class="content-form-onclick">
+                    <input type="text" placeholder="输入新闻关键词试试看">
+                    <button>
+                        <i class="icon-base"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="header-search-ad">
+                <div>
+                    <p>微信公众号</p>
+                    <img src="img/header-ad.jpg" alt="">
+                    <a href="">
+                        <p>加关注</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--头部搜索结束-->
+
+    <!--头部第二层导航开始-->
+    <div class="site-header-nav">
+        <div class="header-nav-ul">
+            <ul>
+                <li><a href="">首页</a></li>
+                <li>|</li>
+                <li><a href="">影视</a></li>
+                <li><a href="">动漫</a></li>
+                <li><a href="">游戏</a></li>
+                <li><a href="">AR/VR</a></li>
+                <li><a href="">建筑</a></li>
+                <li><a href="">设计</a></li>
+                <li><a href="">美工</a></li>
+                <li><a href="">广告</a></li>
+                <li>|</li>
+                <li><a href="">专题</a></li>
+                <li><a href="">专栏</a></li>
+                <li>|</li>
+                <li><a href="">政策</a></li>
+                <li><a href="">数据</a></li>
+                <li><a href="">展会</a></li>
+                <li><a href="">活动</a></li>
+                <li>|</li>
+                <li><a href="">企业</a></li>
+                <li><a href="">人物</a></li>
+                <li><a href="">金融</a></li>
+                <li><a href="">商经</a></li>
+                <li><a href="">社区</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--头部第二层导航结束-->
+
+    <!--内容部分开始-->
+    <div class="container">
+        <!--左侧开始-->
+        <div class="side-left">
+            <!--左侧中左侧开始-->
+            <div class="side-left-left">
+                <div class="focus-img">
+                    <div id="big-pic">
+                        <a href="">
+                            <img src="img/slide01.jpg" width="420" height="260" alt="">
+                            <p></p>
+                        </a>
+                        <a href="">
+                            <img src="img/slide02.jpg" width="420" height="260" alt="">
+                            <p></p>
+                        </a>
+                        <a href="">
+                            <img src="img/slide03.jpg"width="420" height="260" alt="">
+                            <p></p>
+                        </a>
+
+                    </div>
+
+                    <div id="nav">
+                        <ul>
+                            <li class="on">1</li>
+                            <li>2</li>
+                            <li>3</li>
+                        </ul>
+                    </div>
+
+
+                </div>
+                <!--专栏-->
+                <div class="news-box">
+                    <div class="news-title">
+                        <span>专栏</span>
+                        <a href="">更多+</a>
+                    </div>
+                    <div class="news-info">
+                        <div class="news-info-img">
+                            <img src="img/news-img01.png" width="100" height="100" alt="">
+                            
+                        </div>
+                        <div class="news-info-text">
+                            <a href="">
+                                <p>暴雪电竞之路走通了，《守望先锋》的电竞之路才能走顺了</p>
+                                <div>《守望先锋》——被称为“暴雪史上最为成功的IP”，然而，就是这样一款站在巨人肩膀上的游戏产品，其电竞之路走的却是十分坎坷。</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news-end">
+                        <ul>
+                            <li><a href=""><i class="icon-point"></i>《军师联盟》口碑两极化 对三国题材的改编值得借鉴吗？</a></li>
+                            <li><a href=""><i class="icon-point"></i>当日漫卖腐卖肉成风，引入美漫能否净化国内漫画市场？</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!--人物推荐-->
+                <div class="news-box">
+                    <div class="news-title">
+                        <span>人物推荐</span>
+                        <a href="">更多+</a>
+                    </div>
+                    <div class="news-info">
+                        <div class="news-info-img">
+                            <img src="img/news-img02.png" width="100" height="100" alt="">
+
+                        </div>
+                        <div class="news-info-text">
+                            <a href="">
+                                <p>鲁永泉：一个疯子带着一群傻子用互联网重构电影工业体系</p>
+                                <div>鲁永泉博士创立蓝海创意云之时，就始终坚信未来的中国必将在电影领域发起一场重大的革命，这场革命将彻底打破障碍重重的传统小作坊式体系，解决资源地域不平衡，进而改变好莱坞电影全球霸主地位，构建电影工业体系。</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news-end">
+                        <ul>
+                            <li><a href=""><i class="icon-point"></i>上海国际电影节金爵奖揭晓 《三轮浮生》获最佳电影</a></li>
+                            <li><a href=""><i class="icon-point"></i>陈可辛：我已做好了拍网剧的准备</a></li>
+                            <li><a href=""><i class="icon-point"></i>上海国际电影节金爵奖揭晓 《三轮浮生》获最佳电影</a></li>
+                            <li><a href=""><i class="icon-point"></i>北京电影学院教授巩继程：制片管理如何实现高效的管理过程</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <!--左侧中左侧结束-->
+
+            <!--左侧中右侧开始-->
+            <div class="side-left-right">
+                <!--今日头条-->
+                <div class="news-hot">
+                    <p>
+                        <span class="news-hot-sign">今日头条</span>
+                        <a class="news-hot-history" href="">往期头条</a>
+                    </p>
+                    <h2>小众化国产惊悚片的“悲欢岁月”</h2>
+                    <div class="news-hot-list">
+                        <ul>
+                            <li>[ <a class="other-title" href="">A站、B站大量海外剧被下架</a>]</li>
+                            <li>[ <a class="other-title" href="">国产爱情片为何越来越不吃香</a>]</li>
+                            <li>[ <a class="other-title" href="">MOBA手游的海外争夺战</a>]</li>
+                            <li>[ <a class="other-title" href="">上半年综艺节目为何频频扑街</a>]</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="new-hot-item">
+                    <ul>
+                        <li class="font-weight-first"><a href=""><i class="icon-point"></i> [广告]9部门整治食品保健品虚假宣传 虚假广告代言人也担责</a></li>
+                        <li><a href=""><i class="icon-point"></i> [游戏]《绝地求生》官方认定鼠标宏为外挂 已封禁276个账户</a></li>
+                        <li><a href=""><i class="icon-point"></i> [影视]编剧如何讲好故事？揭秘美剧创作中的9条吸引法则</a></li>
+                        <li><a href=""><i class="icon-point"></i> [工美]士大夫占收藏界半边天 利益不该是收藏全部原因</a></li>
+                        <li><a href=""><i class="icon-point"></i> [影视]上半年大盘“遇冷”的背后其实还藏着这些亮点</a></li>
+                        <li class="font-weight-first"><a href=""><i class="icon-point"></i> [广告]9部门整治食品保健品虚假宣传 虚假广告代言人也担责</a></li>
+                        <li><a href=""><i class="icon-point"></i> [游戏]《绝地求生》官方认定鼠标宏为外挂 已封禁276个账户</a></li>
+                        <li><a href=""><i class="icon-point"></i> [影视]编剧如何讲好故事？揭秘美剧创作中的9条吸引法则</a></li>
+                        <li><a href=""><i class="icon-point"></i> [工美]士大夫占收藏界半边天 利益不该是收藏全部原因</a></li>
+                        <li><a href=""><i class="icon-point"></i> [影视]上半年大盘“遇冷”的背后其实还藏着这些亮点</a></li>
+                        <li class="font-weight-first"><a href=""><i class="icon-point"></i> [广告]9部门整治食品保健品虚假宣传 虚假广告代言人也担责</a></li>
+                        <li><a href=""><i class="icon-point"></i> [游戏]《绝地求生》官方认定鼠标宏为外挂 已封禁276个账户</a></li>
+                        <li><a href=""><i class="icon-point"></i> [影视]编剧如何讲好故事？揭秘美剧创作中的9条吸引法则</a></li>
+                        <li><a href=""><i class="icon-point"></i> [工美]士大夫占收藏界半边天 利益不该是收藏全部原因</a></li>
+                        <li><a href=""><i class="icon-point"></i> [影视]上半年大盘“遇冷”的背后其实还藏着这些亮点</a></li>
+
+                    </ul>
+                    
+                </div>
+
+                <!--滚动新闻-->
+                <div class="news-box">
+                    <div class="news-title">
+                        <span>滚动新闻</span>
+                    </div>
+                    <div class="new-hot-item">
+                        <ul>
+                            <li class="font-weight-first"><a href=""><i class="icon-point"></i> [广告]9部门整治食品保健品虚假宣传 虚假广告代言人也担责</a></li>
+                            <li><a href=""><i class="icon-point"></i> [游戏]《绝地求生》官方认定鼠标宏为外挂 已封禁276个账户</a></li>
+                            <li><a href=""><i class="icon-point"></i> [影视]编剧如何讲好故事？揭秘美剧创作中的9条吸引法则</a></li>
+                            <!--<li><a href=""><i class="icon-point"></i> [工美]士大夫占收藏界半边天 利益不该是收藏全部原因</a></li>-->
+                            <!--<li><a href=""><i class="icon-point"></i> [影视]上半年大盘“遇冷”的背后其实还藏着这些亮点</a></li>-->
+                            <!--<li class="font-weight-first"><a href=""><i class="icon-point"></i> [广告]9部门整治食品保健品虚假宣传 虚假广告代言人也担责</a></li>-->
+                            <!--<li><a href=""><i class="icon-point"></i> [游戏]《绝地求生》官方认定鼠标宏为外挂 已封禁276个账户</a></li>-->
+                            <!--<li><a href=""><i class="icon-point"></i> [影视]编剧如何讲好故事？揭秘美剧创作中的9条吸引法则</a></li>-->
+                            <!--<li><a href=""><i class="icon-point"></i> [工美]士大夫占收藏界半边天 利益不该是收藏全部原因</a></li>-->
+                            <!--<li><a href=""><i class="icon-point"></i> [影视]上半年大盘“遇冷”的背后其实还藏着这些亮点</a></li>-->
+                            <!--<li class="font-weight-first"><a href=""><i class="icon-point"></i> [广告]9部门整治食品保健品虚假宣传 虚假广告代言人也担责</a></li>-->
+                            <!--<li><a href=""><i class="icon-point"></i> [游戏]《绝地求生》官方认定鼠标宏为外挂 已封禁276个账户</a></li>-->
+                            <!--<li><a href=""><i class="icon-point"></i> [影视]编剧如何讲好故事？揭秘美剧创作中的9条吸引法则</a></li>-->
+                            <!--<li><a href=""><i class="icon-point"></i> [工美]士大夫占收藏界半边天 利益不该是收藏全部原因</a></li>-->
+                            <!--<li><a href=""><i class="icon-point"></i> [影视]上半年大盘“遇冷”的背后其实还藏着这些亮点</a></li>-->
+
+                        </ul>
+
+                    </div>
+                </div>
+
+
+            </div>
+            <!--左侧中右侧结束-->
+            
+            <div class="container-img">
+                <a href=""><img src="img/container-img.jpg" alt=""></a>
+            </div>
+
+            <div class="side-left-left">
+
+                <!--影视-->
+                <div class="news-box">
+                    <div class="news-title">
+                        <span>影视</span>
+                        <a href="">更多+</a>
+                    </div>
+                    <div class="news-info">
+                        <div class="news-info-img">
+                            <img src="img/news-img02.png" width="100" height="100" alt="">
+
+                        </div>
+                        <div class="news-info-text">
+                            <a href="">
+                                <p>鲁永泉：一个疯子带着一群傻子用互联网重构电影工业体系</p>
+                                <div>鲁永泉博士创立蓝海创意云之时，就始终坚信未来的中国必将在电影领域发起一场重大的革命，这场革命将彻底打破障碍重重的传统小作坊式体系，解决资源地域不平衡，进而改变好莱坞电影全球霸主地位，构建电影工业体系。</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news-end">
+                        <ul>
+                            <li><a href=""><i class="icon-point"></i>上海国际电影节金爵奖揭晓 《三轮浮生》获最佳电影</a></li>
+                            <li><a href=""><i class="icon-point"></i>陈可辛：我已做好了拍网剧的准备</a></li>
+                            <li><a href=""><i class="icon-point"></i>上海国际电影节金爵奖揭晓 《三轮浮生》获最佳电影</a></li>
+                            <li><a href=""><i class="icon-point"></i>北京电影学院教授巩继程：制片管理如何实现高效的管理过程</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!--游戏-->
+                <div class="news-box">
+                    <div class="news-title">
+                        <span>游戏</span>
+                        <a href="">更多+</a>
+                    </div>
+                    <div class="news-info">
+                        <div class="news-info-img">
+                            <img src="img/news-img02.png" width="100" height="100" alt="">
+
+                        </div>
+                        <div class="news-info-text">
+                            <a href="">
+                                <p>鲁永泉：一个疯子带着一群傻子用互联网重构电影工业体系</p>
+                                <div>鲁永泉博士创立蓝海创意云之时，就始终坚信未来的中国必将在电影领域发起一场重大的革命，这场革命将彻底打破障碍重重的传统小作坊式体系，解决资源地域不平衡，进而改变好莱坞电影全球霸主地位，构建电影工业体系。</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news-end">
+                        <ul>
+                            <li><a href=""><i class="icon-point"></i>上海国际电影节金爵奖揭晓 《三轮浮生》获最佳电影</a></li>
+                            <li><a href=""><i class="icon-point"></i>陈可辛：我已做好了拍网剧的准备</a></li>
+                            <li><a href=""><i class="icon-point"></i>上海国际电影节金爵奖揭晓 《三轮浮生》获最佳电影</a></li>
+                            <li><a href=""><i class="icon-point"></i>北京电影学院教授巩继程：制片管理如何实现高效的管理过程</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="side-left-right">
+                <!--动漫-->
+                <div class="news-box">
+                    <div class="news-title">
+                        <span>动漫</span>
+                        <a href="">更多+</a>
+                    </div>
+                    <div class="news-info">
+                        <div class="news-info-img">
+                            <img src="img/news-img02.png" width="100" height="100" alt="">
+
+                        </div>
+                        <div class="news-info-text">
+                            <a href="">
+                                <p>鲁永泉：一个疯子带着一群傻子用互联网重构电影工业体系</p>
+                                <div>鲁永泉博士创立蓝海创意云之时，就始终坚信未来的中国必将在电影领域发起一场重大的革命，这场革命将彻底打破障碍重重的传统小作坊式体系，解决资源地域不平衡，进而改变好莱坞电影全球霸主地位，构建电影工业体系。</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news-end">
+                        <ul>
+                            <li><a href=""><i class="icon-point"></i>上海国际电影节金爵奖揭晓 《三轮浮生》获最佳电影</a></li>
+                            <li><a href=""><i class="icon-point"></i>陈可辛：我已做好了拍网剧的准备</a></li>
+                            <li><a href=""><i class="icon-point"></i>上海国际电影节金爵奖揭晓 《三轮浮生》获最佳电影</a></li>
+                            <li><a href=""><i class="icon-point"></i>北京电影学院教授巩继程：制片管理如何实现高效的管理过程</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!--AR/VR-->
+                <div class="news-box">
+                    <div class="news-title">
+                        <span>AR/VR</span>
+                        <a href="">更多+</a>
+                    </div>
+                    <div class="news-info">
+                        <div class="news-info-img">
+                            <img src="img/news-img02.png" width="100" height="100" alt="">
+
+                        </div>
+                        <div class="news-info-text">
+                            <a href="">
+                                <p>鲁永泉：一个疯子带着一群傻子用互联网重构电影工业体系</p>
+                                <div>鲁永泉博士创立蓝海创意云之时，就始终坚信未来的中国必将在电影领域发起一场重大的革命，这场革命将彻底打破障碍重重的传统小作坊式体系，解决资源地域不平衡，进而改变好莱坞电影全球霸主地位，构建电影工业体系。</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news-end">
+                        <ul>
+                            <li><a href=""><i class="icon-point"></i>上海国际电影节金爵奖揭晓 《三轮浮生》获最佳电影</a></li>
+                            <li><a href=""><i class="icon-point"></i>陈可辛：我已做好了拍网剧的准备</a></li>
+                            <li><a href=""><i class="icon-point"></i>上海国际电影节金爵奖揭晓 《三轮浮生》获最佳电影</a></li>
+                            <li><a href=""><i class="icon-point"></i>北京电影学院教授巩继程：制片管理如何实现高效的管理过程</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!--左侧结束-->
+
+        
+
+        <!--右侧开始-->
+        <div class="side-right">
+            <!--右侧2张图-->
+            <div class="side-right-img">
+                <a href="">
+                    <img src="img/side-right01.jpg" alt="">
+                    <span>史诗《巴霍巴利王2》成最卖座印度片</span>
+                </a>
+            </div>
+            <div class="side-right-img">
+                <a href="">
+                    <img src="img/side-right02.png" alt="">
+                    <span>《异兽来袭》:中国电影工业的崛起</span>
+                </a>
+            </div>
+
+            <!--热门资讯-->
+            <div class="hot-information news-box">
+                <div class="news-title">
+                    <span>热门资讯</span>
+                </div>
+                <div class="hot-information-nav">
+                    <div class="hot-information-nav-ul" id="options">
+                        <ul>
+                            <li class="hot-information-current"><a href="">昨日</a></li>
+                            <li class="hot-information-other"><a href="">本周</a></li>
+                            <li class="hot-information-other"><a href="">本月</a></li>
+                        </ul>
+                    </div>
+                    <div class="hot-information-nav-item" id="contens">
+                        <ul>
+                            <li><i class="icon-rank1">1</i><a href="">剪辑技巧对电影节奏的叙事作用</a></li>
+                            <li><i class="icon-rank2">2</i><a href="">中国艺术品市场新拐点到来了？</a></li>
+                            <li><i class="icon-rank2">3</i><a href="">掌握这11条铁律，才能抓住电影剧本创作的命脉</a></li>
+                            <li><i class="icon-rank3"></i><a href="">国内的建筑设计需要一场“地震”</a></li>
+                            <li><i class="icon-rank3"></i><a href="">2017中国房地产广告公司前5强</a></li>
+                            <li><i class="icon-rank3"></i><a href="">首尔商住混合体建筑于日前完工</a></li>
+                            <li><i class="icon-rank3"></i><a href="">2017台北设计奖开始征集作品</a></li>
+                            <li><i class="icon-rank3"></i><a href="">设计师用米白色蜡砖建造忏悔室</a></li>
+                            <li><i class="icon-rank3"></i><a href="">美国广告业复合年均增长率达4.6%</a></li>
+                            <li><i class="icon-rank3"></i><a href="">马健：艺术品能不能算实物资产吗？</a></li>
+                        </ul>
+
+                        <ul>
+                            <li><i class="icon-rank1">1</i><a href="">中国艺术品市场新拐点到来了？</a></li>
+                            <li><i class="icon-rank2">2</i><a href="">中国艺术品市场新拐点到来了？？</a></li>
+                            <li><i class="icon-rank2">3</i><a href="">掌握这11条铁律，才能抓住电影剧本创作的命脉</a></li>
+                            <li><i class="icon-rank3"></i><a href="">宝莱坞征服中国?美媒称是中国胜利:与好莱坞谈判更具筹码</a></li>
+                            <li><i class="icon-rank3"></i><a href="">徐浩峰：中国电影苦学好莱坞三十年没结果，因为夹生</a></li>
+                            <li><i class="icon-rank3"></i><a href="">首尔商住混合体建筑于日前完工</a></li>
+                            <li><i class="icon-rank3"></i><a href="">2017台北设计奖开始征集作品</a></li>
+                            <li><i class="icon-rank3"></i><a href="">好莱坞镜头背后的女性导演十大里程碑</a></li>
+                            <li><i class="icon-rank3"></i><a href="">攻陷B站 “圈地自萌”的泰剧离打开中国市场还有多远6%</a></li>
+                            <li><i class="icon-rank3"></i><a href="">新丽传媒再次冲击IPO，近3年累计获得政府补助高达1.3亿</a></li>
+                        </ul>
+
+                        <ul>
+                            <li><i class="icon-rank1">1</i><a href="">华策影视再度出海 中俄两国将合拍影视剧</a></li>
+                            <li><i class="icon-rank2">2</i><a href="">2017上半年电影票房增长持续放缓“重工业”电影起步？</a></li>
+                            <li><i class="icon-rank2">3</i><a href="">掌握这11条铁律，才能抓住电影剧本创作的命脉</a></li>
+                            <li><i class="icon-rank3"></i><a href="">攻陷B站 “圈地自萌”的泰剧离打开中国市场还有多远？“地震”</a></li>
+                            <li><i class="icon-rank3"></i><a href="">2017中国房地产广告公司前5强</a></li>
+                            <li><i class="icon-rank3"></i><a href="">国内的建筑设计需要一场“地震”</a></li>
+                            <li><i class="icon-rank3"></i><a href="">2017台北设计奖开始征集作品</a></li>
+                            <li><i class="icon-rank3"></i><a href="">新丽传媒再次冲击IPO，近3年累计获得政府补助高达1.3亿</a></li>
+                            <li><i class="icon-rank3"></i><a href="">美国广告业复合年均增长率达4.6%</a></li>
+                            <li><i class="icon-rank3"></i><a href="">马健：艺术品能不能算实物资产吗？</a></li>
+                        </ul>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+
+            <!--投稿 报道-->
+            <div class="cooperation">
+                <div class="cooperation-left">
+                    <img src="img/img-qy.jpg" alt="">
+                    <p>求报道</p>
+                </div>
+                
+                <div class="cooperation-right">
+                    <img src="img/img-zz.jpg" alt="">
+                    <p>我要投稿</p>
+                </div>
+            </div>
+
+            <!--活动-->
+            <div class="events">
+                <div class="events-title">
+                    <span>活动</span>
+                    <a href="">更多+</a>
+                </div>
+                <div class="events-img">
+                    <a href="">
+                        <img src="img/events-img.jpg"   alt="">
+                        <span>中国娱乐直播峰会，4位嘉宾分享抢先看</span>
+                    </a>
+                </div>
+                <div class="events-end">
+                    <ul>
+                        <li><a href=""><i class="icon-point"></i> 《枪火游侠》TGA决赛6月9日火热开启</a></li>
+                        <li><a href=""><i class="icon-point"></i> 影游还原 游族《军师联盟》风云际会发布会6.8开启</a></li>
+                        <li><a href=""><i class="icon-point"></i> 第十七届龙虾节 “盱眙礼物”文创设计大赛火热进行中</a></li>
+                        <li><a href=""><i class="icon-point"></i> 促文化产业合作 中国-中东欧国家文化创意产业论坛召开</a></li>
+                        <li><a href=""><i class="icon-point"></i>  “互联网与电影工业”高峰论坛举行</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--展会-->
+            <div class="events">
+                <div class="events-title">
+                    <span>展会</span>
+                    <a href="">更多+</a>
+                </div>
+                <div class="events-img">
+                    <a href="">
+                        <img src="img/events-img.jpg" width="100%"  alt="">
+                        <span>中国娱乐直播峰会，4位嘉宾分享抢先看</span>
+                    </a>
+                </div>
+                <div class="events-end">
+                    <ul>
+                        <li><a href=""><i class="icon-point"></i> 《枪火游侠》TGA决赛6月9日火热开启</a></li>
+                        <li><a href=""><i class="icon-point"></i> 影游还原 游族《军师联盟》风云际会发布会6.8开启</a></li>
+                        <li><a href=""><i class="icon-point"></i> 第十七届龙虾节 “盱眙礼物”文创设计大赛火热进行中</a></li>
+                        <li><a href=""><i class="icon-point"></i> 促文化产业合作 中国-中东欧国家文化创意产业论坛召开</a></li>
+                        <li><a href=""><i class="icon-point"></i>  “互联网与电影工业”高峰论坛举行</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--右侧结束-->
+    </div>
+
+    <!--内容部分结束-->
+
+
+    <!--第二层内容开始-->
+
+    <div class="second-flooder">
+        <div>
+            <a class="second-flooder-img1" href=""><img src="img/second-container-ad1.jpg" alt=""></a>
+            <a class="second-flooder-img2" href=""><img src="img/second-container-ad2.jpg" alt=""></a>
+        </div>
+
+        <!--左侧-->
+
+        <div class="flooder-left">
+
+            <div class="flooder-left-left">
+                <!--建筑-->
+                <div class="news-box">
+                    <div class="news-title">
+                        <span>建筑</span>
+                        <a href="">更多+</a>
+                    </div>
+                    <div class="news-info">
+                        <div class="news-info-img">
+                            <img src="img/news-img02.png" width="100" height="100" alt="">
+
+                        </div>
+                        <div class="news-info-text">
+                            <a href="">
+                                <p>鲁永泉：一个疯子带着一群傻子用互联网重构电影工业体系</p>
+                                <div>鲁永泉博士创立蓝海创意云之时，就始终坚信未来的中国必将在电影领域发起一场重大的革命，这场革命将彻底打破障碍重重的传统小作坊式体系，解决资源地域不平衡，进而改变好莱坞电影全球霸主地位，构建电影工业体系。</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news-end">
+                        <ul>
+                            <li><a href=""><i class="icon-point"></i>上海国际电影节金爵奖揭晓 《三轮浮生》获最佳电影</a></li>
+                            <li><a href=""><i class="icon-point"></i>陈可辛：我已做好了拍网剧的准备</a></li>
+                            <li><a href=""><i class="icon-point"></i>上海国际电影节金爵奖揭晓 《三轮浮生》获最佳电影</a></li>
+                            <li><a href=""><i class="icon-point"></i>北京电影学院教授巩继程：制片管理如何实现高效的管理过程</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--美工-->
+                <div class="news-box">
+                    <div class="news-title">
+                        <span>美工</span>
+                        <a href="">更多+</a>
+                    </div>
+                    <div class="news-info">
+                        <div class="news-info-img">
+                            <img src="img/news-img02.png" width="100" height="100" alt="">
+
+                        </div>
+                        <div class="news-info-text">
+                            <a href="">
+                                <p>鲁永泉：一个疯子带着一群傻子用互联网重构电影工业体系</p>
+                                <div>鲁永泉博士创立蓝海创意云之时，就始终坚信未来的中国必将在电影领域发起一场重大的革命，这场革命将彻底打破障碍重重的传统小作坊式体系，解决资源地域不平衡，进而改变好莱坞电影全球霸主地位，构建电影工业体系。</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news-end">
+                        <ul>
+                            <li><a href=""><i class="icon-point"></i>上海国际电影节金爵奖揭晓 《三轮浮生》获最佳电影</a></li>
+                            <li><a href=""><i class="icon-point"></i>陈可辛：我已做好了拍网剧的准备</a></li>
+                            <li><a href=""><i class="icon-point"></i>上海国际电影节金爵奖揭晓 《三轮浮生》获最佳电影</a></li>
+                            <li><a href=""><i class="icon-point"></i>北京电影学院教授巩继程：制片管理如何实现高效的管理过程</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flooder-left-right">
+                <!--设计-->
+                <div class="news-box">
+                    <div class="news-title">
+                        <span>设计</span>
+                        <a href="">更多+</a>
+                    </div>
+                    <div class="news-info">
+                        <div class="news-info-img">
+                            <img src="img/news-img02.png" width="100" height="100" alt="">
+
+                        </div>
+                        <div class="news-info-text">
+                            <a href="">
+                                <p>鲁永泉：一个疯子带着一群傻子用互联网重构电影工业体系</p>
+                                <div>鲁永泉博士创立蓝海创意云之时，就始终坚信未来的中国必将在电影领域发起一场重大的革命，这场革命将彻底打破障碍重重的传统小作坊式体系，解决资源地域不平衡，进而改变好莱坞电影全球霸主地位，构建电影工业体系。</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news-end">
+                        <ul>
+                            <li><a href=""><i class="icon-point"></i>上海国际电影节金爵奖揭晓 《三轮浮生》获最佳电影</a></li>
+                            <li><a href=""><i class="icon-point"></i>陈可辛：我已做好了拍网剧的准备</a></li>
+                            <li><a href=""><i class="icon-point"></i>上海国际电影节金爵奖揭晓 《三轮浮生》获最佳电影</a></li>
+                            <li><a href=""><i class="icon-point"></i>北京电影学院教授巩继程：制片管理如何实现高效的管理过程</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--广告-->
+                <div class="news-box">
+                    <div class="news-title">
+                        <span>广告</span>
+                        <a href="">更多+</a>
+                    </div>
+                    <div class="news-info">
+                        <div class="news-info-img">
+                            <img src="img/news-img02.png" width="100" height="100" alt="">
+
+                        </div>
+                        <div class="news-info-text">
+                            <a href="">
+                                <p>鲁永泉：一个疯子带着一群傻子用互联网重构电影工业体系</p>
+                                <div>鲁永泉博士创立蓝海创意云之时，就始终坚信未来的中国必将在电影领域发起一场重大的革命，这场革命将彻底打破障碍重重的传统小作坊式体系，解决资源地域不平衡，进而改变好莱坞电影全球霸主地位，构建电影工业体系。</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news-end">
+                        <ul>
+                            <li><a href=""><i class="icon-point"></i>上海国际电影节金爵奖揭晓 《三轮浮生》获最佳电影</a></li>
+                            <li><a href=""><i class="icon-point"></i>陈可辛：我已做好了拍网剧的准备</a></li>
+                            <li><a href=""><i class="icon-point"></i>上海国际电影节金爵奖揭晓 《三轮浮生》获最佳电影</a></li>
+                            <li><a href=""><i class="icon-point"></i>北京电影学院教授巩继程：制片管理如何实现高效的管理过程</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="flooder-right">
+            <!--数据-->
+            <div class="events">
+                <div class="events-title">
+                    <span>数据</span>
+                    <a href="">更多+</a>
+                </div>
+                <div class="events-img">
+                    <a href="">
+                        <img src="img/events-img.jpg" width="100%"  alt="">
+                        <span>中国娱乐直播峰会，4位嘉宾分享抢先看</span>
+                    </a>
+                </div>
+                <div class="events-end">
+                    <ul>
+                        <li><a href=""><i class="icon-point"></i> 《枪火游侠》TGA决赛6月9日火热开启</a></li>
+                        <li><a href=""><i class="icon-point"></i> 影游还原 游族《军师联盟》风云际会发布会6.8开启</a></li>
+                        <li><a href=""><i class="icon-point"></i> 第十七届龙虾节 “盱眙礼物”文创设计大赛火热进行中</a></li>
+                        <li><a href=""><i class="icon-point"></i> 促文化产业合作 中国-中东欧国家文化创意产业论坛召开</a></li>
+                        <li><a href=""><i class="icon-point"></i>  “互联网与电影工业”高峰论坛举行</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--政策-->
+            <div class="events">
+                <div class="events-title">
+                    <span>政策</span>
+                    <a href="">更多+</a>
+                </div>
+                <div class="events-img">
+                    <a href="">
+                        <img src="img/events-img.jpg" width="100%"  alt="">
+                        <span>中国娱乐直播峰会，4位嘉宾分享抢先看</span>
+                    </a>
+                </div>
+                <div class="events-end">
+                    <ul>
+                        <li><a href=""><i class="icon-point"></i> 《枪火游侠》TGA决赛6月9日火热开启</a></li>
+                        <li><a href=""><i class="icon-point"></i> 影游还原 游族《军师联盟》风云际会发布会6.8开启</a></li>
+                        <li><a href=""><i class="icon-point"></i> 第十七届龙虾节 “盱眙礼物”文创设计大赛火热进行中</a></li>
+                        <li><a href=""><i class="icon-point"></i> 促文化产业合作 中国-中东欧国家文化创意产业论坛召开</a></li>
+                        <li><a href=""><i class="icon-point"></i>  “互联网与电影工业”高峰论坛举行</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--第二层内容结束-->
+
+    <!--第三层内容开始-->
+
+    <div class="second-flooder">
+        <div>
+            <a class="second-flooder-img1" href=""><img src="img/second-container-ad3.png" alt=""></a>
+            <a class="second-flooder-img2" href=""><img src="img/second-container-ad4.jpg" alt=""></a>
+        </div>
+
+        <!--左侧-->
+
+        <div class="flooder-left">
+
+            <div class="flooder-left-left">
+                <!--建筑-->
+                <div class="news-box">
+                    <div class="news-title">
+                        <span>建筑</span>
+                        <a href="">更多+</a>
+                    </div>
+                    <div class="news-info">
+                        <div class="news-info-img">
+                            <img src="img/news-img02.png" width="100" height="100" alt="">
+
+                        </div>
+                        <div class="news-info-text">
+                            <a href="">
+                                <p>鲁永泉：一个疯子带着一群傻子用互联网重构电影工业体系</p>
+                                <div>鲁永泉博士创立蓝海创意云之时，就始终坚信未来的中国必将在电影领域发起一场重大的革命，这场革命将彻底打破障碍重重的传统小作坊式体系，解决资源地域不平衡，进而改变好莱坞电影全球霸主地位，构建电影工业体系。</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news-end">
+                        <ul>
+                            <li><a href=""><i class="icon-point"></i>上海国际电影节金爵奖揭晓 《三轮浮生》获最佳电影</a></li>
+                            <li><a href=""><i class="icon-point"></i>陈可辛：我已做好了拍网剧的准备</a></li>
+                            <li><a href=""><i class="icon-point"></i>上海国际电影节金爵奖揭晓 《三轮浮生》获最佳电影</a></li>
+                            <li><a href=""><i class="icon-point"></i>北京电影学院教授巩继程：制片管理如何实现高效的管理过程</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--美工-->
+                <div class="news-box">
+                    <div class="news-title">
+                        <span>美工</span>
+                        <a href="">更多+</a>
+                    </div>
+                    <div class="news-info">
+                        <div class="news-info-img">
+                            <img src="img/news-img02.png" width="100" height="100" alt="">
+
+                        </div>
+                        <div class="news-info-text">
+                            <a href="">
+                                <p>鲁永泉：一个疯子带着一群傻子用互联网重构电影工业体系</p>
+                                <div>鲁永泉博士创立蓝海创意云之时，就始终坚信未来的中国必将在电影领域发起一场重大的革命，这场革命将彻底打破障碍重重的传统小作坊式体系，解决资源地域不平衡，进而改变好莱坞电影全球霸主地位，构建电影工业体系。</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news-end">
+                        <ul>
+                            <li><a href=""><i class="icon-point"></i>上海国际电影节金爵奖揭晓 《三轮浮生》获最佳电影</a></li>
+                            <li><a href=""><i class="icon-point"></i>陈可辛：我已做好了拍网剧的准备</a></li>
+                            <li><a href=""><i class="icon-point"></i>上海国际电影节金爵奖揭晓 《三轮浮生》获最佳电影</a></li>
+                            <li><a href=""><i class="icon-point"></i>北京电影学院教授巩继程：制片管理如何实现高效的管理过程</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flooder-left-right">
+                <!--设计-->
+                <div class="news-box">
+                    <div class="news-title">
+                        <span>设计</span>
+                        <a href="">更多+</a>
+                    </div>
+                    <div class="news-info">
+                        <div class="news-info-img">
+                            <img src="img/news-img02.png" width="100" height="100" alt="">
+
+                        </div>
+                        <div class="news-info-text">
+                            <a href="">
+                                <p>鲁永泉：一个疯子带着一群傻子用互联网重构电影工业体系</p>
+                                <div>鲁永泉博士创立蓝海创意云之时，就始终坚信未来的中国必将在电影领域发起一场重大的革命，这场革命将彻底打破障碍重重的传统小作坊式体系，解决资源地域不平衡，进而改变好莱坞电影全球霸主地位，构建电影工业体系。</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news-end">
+                        <ul>
+                            <li><a href=""><i class="icon-point"></i>上海国际电影节金爵奖揭晓 《三轮浮生》获最佳电影</a></li>
+                            <li><a href=""><i class="icon-point"></i>陈可辛：我已做好了拍网剧的准备</a></li>
+                            <li><a href=""><i class="icon-point"></i>上海国际电影节金爵奖揭晓 《三轮浮生》获最佳电影</a></li>
+                            <li><a href=""><i class="icon-point"></i>北京电影学院教授巩继程：制片管理如何实现高效的管理过程</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--广告-->
+                <div class="news-box">
+                    <div class="news-title">
+                        <span>广告</span>
+                        <a href="">更多+</a>
+                    </div>
+                    <div class="news-info">
+                        <div class="news-info-img">
+                            <img src="img/news-img02.png" width="100" height="100" alt="">
+
+                        </div>
+                        <div class="news-info-text">
+                            <a href="">
+                                <p>鲁永泉：一个疯子带着一群傻子用互联网重构电影工业体系</p>
+                                <div>鲁永泉博士创立蓝海创意云之时，就始终坚信未来的中国必将在电影领域发起一场重大的革命，这场革命将彻底打破障碍重重的传统小作坊式体系，解决资源地域不平衡，进而改变好莱坞电影全球霸主地位，构建电影工业体系。</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news-end">
+                        <ul>
+                            <li><a href=""><i class="icon-point"></i>上海国际电影节金爵奖揭晓 《三轮浮生》获最佳电影</a></li>
+                            <li><a href=""><i class="icon-point"></i>陈可辛：我已做好了拍网剧的准备</a></li>
+                            <li><a href=""><i class="icon-point"></i>上海国际电影节金爵奖揭晓 《三轮浮生》获最佳电影</a></li>
+                            <li><a href=""><i class="icon-point"></i>北京电影学院教授巩继程：制片管理如何实现高效的管理过程</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="flooder-right">
+            <!--数据-->
+            <div class="events">
+                <div class="events-title">
+                    <span>数据</span>
+                    <a href="">更多+</a>
+                </div>
+                <div class="events-img">
+                    <a href="">
+                        <img src="img/events-img.jpg" width="100%"  alt="">
+                        <span>中国娱乐直播峰会，4位嘉宾分享抢先看</span>
+                    </a>
+                </div>
+                <div class="events-end">
+                    <ul>
+                        <li><a href=""><i class="icon-point"></i> 《枪火游侠》TGA决赛6月9日火热开启</a></li>
+                        <li><a href=""><i class="icon-point"></i> 影游还原 游族《军师联盟》风云际会发布会6.8开启</a></li>
+                        <li><a href=""><i class="icon-point"></i> 第十七届龙虾节 “盱眙礼物”文创设计大赛火热进行中</a></li>
+                        <li><a href=""><i class="icon-point"></i> 促文化产业合作 中国-中东欧国家文化创意产业论坛召开</a></li>
+                        <li><a href=""><i class="icon-point"></i>  “互联网与电影工业”高峰论坛举行</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--政策-->
+            <div class="events">
+                <div class="events-title">
+                    <span>政策</span>
+                    <a href="">更多+</a>
+                </div>
+                <div class="events-img">
+                    <a href="">
+                        <img src="img/events-img.jpg" width="100%"  alt="">
+                        <span>中国娱乐直播峰会，4位嘉宾分享抢先看</span>
+                    </a>
+                </div>
+                <div class="events-end">
+                    <ul>
+                        <li><a href=""><i class="icon-point"></i> 《枪火游侠》TGA决赛6月9日火热开启</a></li>
+                        <li><a href=""><i class="icon-point"></i> 影游还原 游族《军师联盟》风云际会发布会6.8开启</a></li>
+                        <li><a href=""><i class="icon-point"></i> 第十七届龙虾节 “盱眙礼物”文创设计大赛火热进行中</a></li>
+                        <li><a href=""><i class="icon-point"></i> 促文化产业合作 中国-中东欧国家文化创意产业论坛召开</a></li>
+                        <li><a href=""><i class="icon-point"></i>  “互联网与电影工业”高峰论坛举行</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--第三层内容结束-->
+
+    <!--友情链接开始-->
+
+    <div class="friend-link">
+        <div class="news-box">
+            <div class="news-title">
+                <span>友情链接</span>
+            </div>
+        </div>
+
+        <div class="link-item">
+            <ul>
+                <li><a href="">中国剧本网</a></li>
+                <li><a href="">中国编剧网</a></li>
+                <li><a href="">我爱竞赛网</a></li>
+                <li><a href="">赛欢网</a></li>
+                <li><a href="">赛欢网</a></li>
+                <li><a href="">游讯手游</a></li>
+                <li><a href="">酷米网</a></li>
+                <li><a href="">三十六计</a></li>
+                <li><a href="">简单动漫</a></li>
+                <li><a href="">爱漫画</a></li>
+                <li><a href="">GMGC第六届全球游戏大会</a></li>
+                <li><a href="">chinajoy</a></li>
+                <li><a href="">中国动漫产业网</a></li>
+                <li><a href="">设计量贩铺</a></li>
+                <li><a href="">全球顶尖创意分享平台</a></li>
+                <li><a href="">玩具公司</a></li>
+                <li><a href="">王商博客</a></li>
+                <li id="last-link-item"><a href="">拍电影</a></li>
+            </ul>
+        </div>
+
+
+
+
+    </div>
+    <!--友情链接结束-->
+
+
+    <!--footer开始-->
+
+    <div class="footer">
+        <div class="footer-content">
+
+            <div class="footer-first">
+                <div class="footer-first-logo">
+                    <a href=""><img src="img/logo-bottom.png" alt=""></a>
+                </div>
+                <div class="footer-first-text1">
+                    <p>苏州创意云网络科技有限公司 2008 - 2016 </p>
+                    <p>All Rights Reserved</p>
+                </div>
+                <div class="footer-first-text2">
+                    <p>网络文化经营许可证：苏网文(2015)2028-047号 </p>
+                    <p>增值电信业务经营许可证：苏B1.B2-20150425 </p>
+                </div>
+
+
+
+            </div>
+
+            <div class="footer-second">
+                <span>
+                    <img src="img/weixin.png" alt="">
+                    <p>官方微博</p>
+                </span>
+                <span>
+                    <img src="img/weixin.png" alt="">
+                    <p>微信订阅号</p>
+                </span>
+                <span>
+                    <img src="img/weixin.png" alt="">
+                    <p>微信服务号</p>
+                </span>
+
+            </div>
+
+            <div class="footer-third">
+                <ul>
+                    <li><i class="icon-style icon-tel"></i>全国咨询热线：400-164-7979</li>
+                    <li><i class="icon-style icon-adds"></i>公司分布：苏州、北京、上海、广州、香港、沈阳</li>
+                    <li><i class="icon-style icon-qq"></i>客户服务QQ：4009287979   2773398623</li>
+                </ul>
+                
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <!--footer结束-->
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,797 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #333333;
+}
+
+html,body{
+    min-width: 1190px;
+}
+
+/*头部导航样式开始*/
+
+.site-header-upper{
+    color: #333;
+    /*background-color: #666666;*/
+    font-family: "Microsoft YaHei";
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.site-header-content{
+    width: 1190px;
+    margin: 0px auto;
+
+    overflow: hidden;
+}
+
+.site-header-content-left li{
+    float: left;
+    height: 37px;
+    line-height: 37px;
+
+}
+
+.site-header-content-left-border{
+    border-right: 1px solid #e4e4e4;
+}
+
+.site-header-content-left .triangle{
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    border-bottom: 5px solid black;
+    vertical-align: middle;
+}
+
+.site-header-content-right{
+    float: right;
+    overflow: hidden;
+}
+
+.site-header-content-right li{
+    float: left;
+    height: 37px;
+    line-height: 37px;
+
+}
+
+.site-header-content ul li a{
+    color: #333333;
+    font-size: 14px;
+    padding: 0px 10px;
+}
+
+/*头部导航样式结束*/
+
+/*头部搜索开始*/
+
+.site-header-search{
+    width: 1190px;
+    margin: 0px auto;
+}
+.header-search-img{
+    margin-top: 5px;
+}
+
+.header-search-content{
+
+    overflow: hidden;
+}
+
+.search-content-logo{
+    float: left;
+    padding: 45px 0px;
+
+}
+
+.search-content-form{
+    float: left;
+    margin-left: 250px;
+    margin-top: 15px;
+}
+
+
+.content-form-item ul li{
+    float: left;
+    padding: 0px 5px;
+    font-size: 15px;
+    margin: 10px 0px ;
+    border-right: 1px solid #e4e4e4;
+}
+
+.content-form-onclick input{
+    width: 400px;
+    padding: 10px 15px;
+    float: left;
+    border-radius: 3px 0px 0px 3px;
+    outline: none;
+    box-shadow: 0px 1px 2px #ccc inset;
+
+}
+
+.content-form-onclick button{
+    height: 39px;
+    width: 100px;
+    background-color: #e34e43;
+    float: left;
+    border: 0;
+    border-radius: 0px 3px 3px 0px ;
+    outline: none;
+
+}
+
+.content-form-onclick button:hover{
+    background-color: brown;
+}
+
+.content-form-onclick .icon-base{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(../img/icon-base.png) no-repeat;
+}
+
+.header-search-ad{
+    float: right;
+    border: 1px solid #e4e4e4;
+    padding: 8px;
+}
+
+.header-search-ad p {
+    font-size: 12px;
+}
+
+.header-search-ad a p{
+    display: block;
+    color: white;
+    font-weight: bolder;
+    background-color: #e34e43;
+    text-align: center;
+    padding: 3px 0px;
+}
+
+/*头部搜索结束*/
+
+/*第二层导航开始*/
+.site-header-nav {
+    clear: both;
+    border-top: 3px solid #353b3f;
+    background: url(../img/gary-bg.jpg);
+    overflow: hidden;
+
+}
+
+.header-nav-ul{
+    width: 1190px;
+    margin: 0px auto;
+}
+
+.header-nav-ul ul li{
+    float: left;
+    height: 40px;
+    line-height: 40px;
+}
+
+.header-nav-ul ul li a{
+    padding: 4px 12px;
+}
+
+.header-nav-ul ul li a:hover{
+    background-color: #333;
+    color: white;
+}
+/*第二层导航结束*/
+
+/*内容开始*/
+
+.container{
+    width: 1190px;
+    margin: 0px auto;
+    border: 1px solid blue;
+    overflow: hidden;
+}
+
+   /*内容左侧开始*/
+
+/*轮播图开始   轮播图开始*/
+.focus-img{
+    width: 420px;
+    height: 260px;
+    position: relative;
+    overflow: hidden;
+}
+
+#big-pic{
+    width: 1260px;
+    height: 260px;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#big-pic a{
+    float: left;
+}
+
+
+#nav{
+    clear: both;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+}
+
+#nav  li{
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.5);
+    float: left;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+#nav .on{
+    background-color: red;
+}
+
+
+
+/*轮播图结束   轮播图结束*/
+
+
+
+
+
+.side-left{
+    width: 868px;
+    float: left;
+    border: 1px solid yellowgreen;
+    overflow: hidden;
+}
+    /*内容左侧的左侧开始*/
+.side-left-left{
+    width: 420px;
+    float: left;
+}
+
+.news-box .news-title{
+    background: url(../img/news-title-bg.jpg) no-repeat;
+    border-top: solid 3px #e34e43;
+    height: 28px;
+    overflow: hidden;
+}
+
+.news-title span{
+    display: block;
+    color: white;
+    font-size: 18px;
+    line-height: 20px;
+    float: left;
+    margin-left: 14px;
+    width: 80px;
+    text-align: center;
+}
+.news-title a{
+    float: right;
+    font-size: 15px;
+    line-height: 20px;
+    color: #aaa;
+    font-weight: bolder;
+}
+
+.news-box .news-info{
+    overflow: hidden;
+    border-bottom: dashed 2px #e4e4e4;
+    padding: 5px 0px 12px 0px;
+}
+
+.news-info-img{
+    float: left;
+}
+
+.news-info-text p{
+    color: #999;
+    font-size: 18px;
+    line-height: 20px;
+    margin: 2px 0px 5px 110px;
+
+}
+
+.news-info-text div{
+    color: #666;
+    font-size: 15px;
+    margin: 2px 0px 5px 110px;
+    line-height: 18px;
+    overflow: hidden;
+    height: 55px;
+}
+
+.news-box .news-end{
+    background: url(../img/gary-bg.jpg);
+    padding: 10px 0px;
+    margin: 10px 0px;
+}
+
+.news-box .news-end ul li{
+    color: #666;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.icon-point{
+    background-color: black;
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    margin: 0px 5px 0px 10px;
+}
+
+.news-info-text :hover p {
+    color: red;
+    text-decoration: underline;
+}
+
+.news-info-text :hover div {
+    color: red;
+}
+
+.news-info-text :hover p {
+    color: red;
+    text-decoration: underline;
+}
+
+.news-end ul li a:hover{
+    color: red;
+    text-decoration: underline;
+}
+
+    /*内容左侧的右侧开始*/
+.side-left-right{
+    width: 420px;
+    float: right;
+}
+
+    /*今日头条*/
+.news-hot{
+    border-bottom: 2px dashed #e4e4e4;
+    overflow: hidden;
+    padding-bottom: 15px;
+}
+
+.news-hot-sign{
+    float: left;
+    padding: 5px;
+    background-color: #e34e43;
+    color: white;
+
+}
+
+.news-hot-history{
+    float: right;
+    text-decoration: underline;
+    color: #666666;
+    line-height: 28px;
+}
+
+.news-hot h2{
+    clear: both;
+    font-size: 28px;
+    line-height: 70px;
+}
+
+.news-hot h2:hover{
+    color: red;
+    text-decoration: underline;
+}
+
+.news-hot-list ul li{
+    float: left;
+    font-size: 14px;
+    line-height: 2em;
+}
+
+.news-hot-list .other-title{
+    display: inline-block;
+    width: 190px;
+}
+
+.news-hot-list .other-title:hover{
+    color: red;
+}
+
+.new-hot-item{
+    font-size: 14px;
+    line-height: 2em;
+    padding: 20px 0px;
+}
+
+.font-weight-first{
+    font-weight: bolder;
+}
+
+.new-hot-item ul li a:hover{
+    color: red;
+    text-decoration: underline;
+}
+
+
+
+   /*内容左侧结束*/
+
+
+
+
+    /*内容右侧开始*/
+.side-right{
+    width: 290px;
+    float: right;
+    border: 1px solid yellowgreen;
+
+}
+
+.side-right-img a{
+    display: inline-block;
+    height: 125px;
+    overflow: hidden;
+}
+
+.side-right-img img{
+    width: 100%;
+}
+
+.side-right-img{
+    position: relative;
+}
+
+.side-right-img a span{
+    font-size: 13px;
+    display: inline-block;
+    position: absolute;
+    top:100px;
+    left: 0px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(14,19,17,0.6);
+    padding: 6px 0px;
+}
+
+
+    /*热门资讯*/
+.hot-information-nav{
+    background: url(../img/gary-bg.jpg);
+}
+
+.hot-information-nav{
+    margin-top: 10px;
+}
+
+.hot-information-nav-ul ul li{
+    float: left;
+    padding: 8px 32px;
+}
+
+.hot-information-other{
+    border-bottom: 3px solid black;
+}
+.hot-information-current{
+    border-bottom: 3px solid #e34e43;
+}
+
+.hot-information-nav-ul ul li:hover{
+    border-bottom: 3px solid #e34e43;
+}
+
+.hot-information-nav-item{
+    clear: both;
+}
+
+.hot-information-nav-item ul li{
+    font-size: 14px;
+    line-height: 30px;
+    height: 30px;
+    overflow: hidden;
+}
+
+.hot-information-nav-item ul li a:hover{
+    color: #e34e43;
+    text-decoration: underline;
+}
+
+.icon-rank1{
+    display: inline-block;
+    background-color: #e34e43;
+    color: white;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    line-height: 15px;
+    margin: 0px 10px;
+}
+
+.icon-rank2{
+    display: inline-block;
+    background-color: black;
+    color: white;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    line-height: 15px;
+    margin: 0px 10px;
+}
+
+.icon-rank3{
+    display: inline-block;
+    background-color: black;
+    width: 6px;
+    height: 6px;
+    margin: 0px 15px 2px 15px;
+}
+
+    /*合作*/
+.cooperation{
+    clear: both;
+    overflow: hidden;
+}
+
+.cooperation p:hover{
+    text-decoration: underline;
+}
+
+.cooperation-left {
+    float: left;
+    /*width: 140px;*/
+    margin-left: 15px;
+}
+
+.cooperation-left p {
+    display: block;
+    padding: 10px 35px;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.cooperation-right{
+    float: right;
+    /*width: 140px;*/
+    margin-right: 15px;
+}
+
+.cooperation-right p {
+    display: block;
+    padding: 10px 30px;
+    background-color: #e34e43;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+}
+
+    /*展会 展会*/
+.events{
+    margin-top: 2px;
+    background: url(../img/gary-bg.jpg);
+    padding: 10px 0px;
+}
+
+.events-title span{
+    display: inline-block;
+    font-size: 18px;
+    padding: 0px 15px;
+    margin: 5px 10px;
+    border-left: 2px solid #e34e43;
+}
+
+.events-title a{
+    display: inline-block;
+    font-size: 15px;
+    color: #666666;
+    float: right;
+    margin: 7px 10px;
+}
+
+.events-img{
+    margin: 10px;
+    position: relative;
+}
+
+.events-img img{
+    width: 100%;
+    height: 140px;
+}
+
+.events-end ul li{
+    color: #666;
+    font-size: 13px;
+    line-height: 2em;
+    height: 2em;
+    overflow: hidden;
+}
+
+.events-img a span{
+    font-size: 15px;
+    display: inline-block;
+    position: absolute;
+    top:112px;
+    left: 0px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(14,19,17,0.6);
+    padding: 6px 0px;
+}
+
+    /*内容右侧结束*/
+
+/*第二层内容开始*/
+
+.second-flooder{
+    width: 1190px;
+    margin: 0px auto;
+    overflow: hidden;
+    border: 1px solid brown;
+}
+
+
+.flooder-left{
+    width: 868px;
+    float: left;
+    border: 1px solid blue;
+    overflow: hidden;
+}
+
+.flooder-right{
+    width: 290px;
+    float: right;
+    overflow: hidden;
+}
+
+.flooder-left-left{
+    width: 420px;
+    float: left;
+}
+
+.flooder-left-right{
+    width: 420px;
+    float: right;
+}
+
+.second-flooder-img1{
+    float: left;
+}
+
+.second-flooder-img2{
+    float: right;
+}
+
+/*友情链接开始*/
+
+.friend-link{
+    width: 1190px;
+    margin: 10px auto;
+}
+
+.link-item{
+    overflow: hidden;
+}
+
+.link-item ul li{
+    float: left;
+    border-right: 1px solid #999;
+    font-size: 14px;
+    padding: 0px 10px;
+    margin: 10px 0px;
+}
+
+#last-link-item{
+    border: 0;
+}
+
+
+/*footer开始*/
+
+.footer{
+    overflow: hidden;
+    background-color: #202830;
+    width: 100%;
+    color: #8d8d8e;
+}
+
+.footer-content{
+    width: 1190px;
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+.footer-first{
+    float: left;
+}
+
+
+.footer-second{
+    float: left;
+    margin: 35px 0px 0px 120px;
+}
+
+.footer-second span{
+    display: inline-block;
+    width: 88px;
+    text-align: center;
+    margin: 0px 0px 0px 5px;
+}
+
+.footer-third{
+    float: right;
+}
+
+.footer-first{
+    margin: 5px 0px 0px 10px;
+}
+
+.footer-first-logo{
+    margin: 20px 0px;
+}
+
+
+.footer-first-text1{
+    line-height: 1.5em;
+    margin-bottom: 10px;
+}
+
+.footer-first-text2{
+    font-size: 13px;
+    line-height: 20px;
+}
+
+
+.footer-third{
+    margin: 35px 20px 0px 0px;
+}
+
+.footer-third ul li{
+    line-height: 2em;
+}
+
+.icon-style{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 5px;
+    background: url(../img/icon.png) no-repeat;
+}
+
+
+.icon-adds{
+    background-position:0 -38px;
+}
+
+.icon-qq{
+    background-position: 0 -76px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
